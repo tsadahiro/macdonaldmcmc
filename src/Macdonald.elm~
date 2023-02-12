@@ -1,0 +1,33 @@
+module Macdonald exposing (..)
+
+import Browser
+import Html exposing (Html)
+import Html.Events as Events
+import Html.Attributes as Attrs
+import Svg exposing (..)
+import Svg.Attributes exposing (..)
+import Svg.Events exposing (..)
+
+type alias Model = {lambda:[Int]
+                   }
+
+main = Browser.element {init = init
+                       ,update = update
+                       ,view = view
+                       ,subscriptions = subscriptions
+                       }
+
+init : () -> (Model, Cmd)
+init _ = (Model [], Cmd.none)
+
+update : Msg -> Model -> (Model, Cmd)
+update msg model =
+    (model, Cmd.none)
+
+view : Model -> Html Msg
+view model =
+    Html.div [][]
+
+subscriptions : Model -> Sub
+subscriptions model =
+    Sub.none

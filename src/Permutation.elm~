@@ -1,0 +1,9 @@
+module Permutation exposing (..)
+
+import Random.List
+
+type alias Permutation = List Int
+
+random : Int -> Random.Generator Permutation
+random size =
+    Random.List.shuffle <| List.range 1 size
